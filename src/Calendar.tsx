@@ -4,6 +4,7 @@ import "./Calendar.scss";
 import DaySpanColumn from "./components/DaySpanColumn/DaySpanColumn";
 import { getCurrentWeekDays } from "./utils/date-utils";
 import Timeline from "./components/Timeline/Timeline";
+import WeekHeader from "./components/WeekHeader/WeekHeader";
 
 interface CalendarProps {
   locale: string;
@@ -21,10 +22,13 @@ const Calendar: React.FC<CalendarProps> = ({ locale }) => {
 
   return (
     <div className="calendar">
-      <Timeline />
-      {/* {daysOfWeek.map(day => (
-        <DaySpanColumn key={day.dayOfYear()} day={day} />
-      ))} */}
+      <WeekHeader daysOfWeek={daysOfWeek} />
+      <div className="calendar_body">
+        <Timeline />
+        {daysOfWeek.map(day => (
+          <DaySpanColumn key={day.dayOfYear()} day={day} />
+        ))}
+      </div>
     </div>
   );
 };

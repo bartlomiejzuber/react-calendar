@@ -1,4 +1,6 @@
 .calendar {
-  display: flex;
-  justify-content: space-around;
+  .calendar_body {
+    display: flex;
+    justify-content: space-around;
+  }
 }
