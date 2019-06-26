@@ -1,0 +1,21 @@
+.timeline {
+  min-width: 30px;
+  padding: 0 10px;
+  position: absolute;
+  left: 0;
+}
+
+.time-line_hour-span {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  &:after {
+    content: "";
+    border: 1px solid #000;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
