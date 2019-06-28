@@ -8,12 +8,14 @@ interface DaySpanProps {
   day: Moment;
 }
 
-const handleQuarterSpanClick = () => {};
+const handleQuarterSpanClick = () => {
+  
+};
 const DaySpan: React.FC<DaySpanProps> = ({ day }) => {
   return (
-    <div className="day-span-column">
+    <div className="day-span">
       {HOURS_IN_DAY_ARRAY.map(hour => (
-        <HourSpan hour={hour} onQuarterSpanClick={handleQuarterSpanClick} />
+        <HourSpan key={hour} hour={hour} onQuarterSpanClick={handleQuarterSpanClick} withBorder/>
       ))}
     </div>
   );

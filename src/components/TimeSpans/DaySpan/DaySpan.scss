@@ -1,4 +1,11 @@
-.day-span-column {
+.day-span {
     display: flex;
     flex-direction: column;
+    min-width: 81px;
+    flex: 1 0;
+    border-left: 1px solid #000;
+
+    &:last-child {
+        border-right: 1px solid #000;
+    }
 }
