@@ -9,6 +9,7 @@ interface WeekHeaderProps {
 const WeekHeader: React.FC<WeekHeaderProps> = ({ daysOfWeek }) => {
   return (
     <div className="week-header">
+      <div className="time-zone">gmt+1</div>
       {daysOfWeek.map(day => (
         <div>
           <h4>{day.format("DD/MM/YYYY")}</h4>

@@ -3,6 +3,14 @@
   justify-content: space-around;
 
   & > div {
-    max-width: 200px;
+    flex: 1 0;
+  }
+
+  .time-zone {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    flex: 0 0;
+    min-width: 50px;
   }
 }
